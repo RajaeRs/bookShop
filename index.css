@@ -1,0 +1,184 @@
+.tableContainer{
+    width: fit-content;
+    margin: 0 auto;
+    transform: translateY(60%);
+}
+table, th, td{
+    border: 1px solid gray;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 0.2rem 0.3rem;
+}
+
+tr th{
+    color: lightgray;
+    width: 10rem;
+    font-size: 1rem;
+    font-weight: 200;
+    background-color: grey;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    border: none;
+}
+
+.action{
+    display: flex;
+    justify-content: space-around;
+    border: none;
+    border-right: 1px solid gray;
+}
+
+.head{
+    width: 90vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateY(50%);
+}
+
+.head h1{
+    font-size: 1.6rem;
+    font-weight: 400;
+}
+
+.btn{
+    padding: 0.1rem 0.2rem;
+    border-radius: 0.2rem;
+}
+
+#btns{
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: turquoise;
+}
+
+#btnEDIT{
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 600;
+    background-color: rgb(156, 226, 15);
+    padding: 0% 6%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+#btnDELETE{
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 600;
+    padding: 0% 6%;
+    background-color: red;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+}
+
+
+/* .add{
+    background-color: mediumslateblue;
+    height: 1rem;
+    font-size: 1.2rem;
+    padding: 0.3rem 0.5rem;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+} */
+
+.edit{
+    background-color: rgb(218, 218, 40);
+}
+
+.delete{
+    background-color: red;
+}
+
+.formContainer{
+    width: fit-content;
+    margin: 0% auto;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+}
+
+.inputs input{
+    width: 12rem;
+    background-color: lightgray;
+    border: none;
+}
+
+.inputs:not(:last-child), .formImage{
+    margin-bottom: 1rem;
+}
+
+.formBtn{
+    background-color: mediumslateblue;
+    width: fit-content;
+}
+
+#special{
+    margin-top: 1rem;
+    transform: translate(-50%,0%);
+    position: absolute;
+    left: 50%
+}
+
+#inpgroup{
+    width: 15rem;
+    margin-bottom: 1rem;
+}
+
+#jumbo{
+    position: absolute;
+    transform: translate(-50%,30%);
+    left: 50%
+}
+
+#newBook{
+    width: 100vw;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: -0%;
+    top: 12%;
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+#newBook h1{
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: mediumvioletred;
+}
+
+#navbar{
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 3rem;
+}
+
+#feedback{
+    transform: translateY(50%);
+}
+
+.center{
+    width: fit-content;
+    margin: auto;
+    transform: translate(-50%, -100%);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    color: royalblue;
+}
+
+.center h1{
+    font-size: 1.8rem;
+}
