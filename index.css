@@ -1,7 +1,14 @@
+*,*:hover{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
 .tableContainer{
+    display: flex;
     width: fit-content;
-    margin: 0 auto;
-    transform: translateY(60%);
+    /* margin: 0 auto; */
+    transform: translate(35%,5%);
 }
 table, th, td{
     border: 1px solid gray;
@@ -78,17 +85,6 @@ a{
     display: flex;
     align-items: center;
 }
-
-
-/* .add{
-    background-color: mediumslateblue;
-    height: 1rem;
-    font-size: 1.2rem;
-    padding: 0.3rem 0.5rem;
-    font-weight: 400;
-    display: flex;
-    align-items: center;
-} */
 
 .edit{
     background-color: rgb(218, 218, 40);
@@ -169,16 +165,155 @@ a{
     transform: translateY(50%);
 }
 
-.center{
-    width: fit-content;
-    margin: auto;
-    transform: translate(-50%, -100%);
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    color: royalblue;
+#body{
+    background-image: url("https://simplonline-v3-prod.s3.eu-west-3.amazonaws.com/media/image/jpg/faa8c5a3-4790-4278-a865-5f526037a720.jpg");
 }
 
-.center h1{
-    font-size: 1.8rem;
+#cent{
+    width: fit-content;
+    height: 20vh;
+    position: absolute;
+    transform: translate(-50%, 00%);
+    left: 50%;
+    top: 40%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#cent h1{
+    font-size: 4rem;
+    text-shadow: 2px 2px 2px black;
+}
+
+#searchInput{
+    background-color: blanchedalmond;
+    border: none;
+    outline: none;
+    width: 20rem;
+    height: 2.5rem;
+    margin-top: 10%;
+}
+
+#searchBtn{
+    background-color: cadetblue;
+    text-decoration: none;
+    color: black;
+    padding: 1% 4%;
+    font-size: 1.4rem;
+    font-weight: 500;
+    margin-top: 5%;
+
+}
+
+.tableContainer .book .img{
+    width: 300px;
+    height: 300px;
+}
+
+.imagee{
+    width: 250px;
+    height: 200px;
+}
+
+.book{
+    width: fit-content;
+    /* border: 2px solid gray; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 3rem;
+    margin-right: 2rem;
+}
+
+.book a{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+}
+
+#title{
+    width: 60%;
+    font-size: 1rem;
+    font-weight: 600;
+    color: cadetblue;
+    margin: 0;
+    margin-top: 0.6rem;
+    border-top: 1px solid gray;
+
+}
+
+#date{
+    border-bottom: 1px solid gray;
+}
+
+.input{
+    width: 25rem;
+}
+
+.messageForm{
+    width: fit-content;
+    margin: auto;
+    transform: translateY(20%);
+    position: relative;
+}
+
+#msgbtn{
+    margin: auto;
+    width: fit-content;
+    position: absolute;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.bookContainer{
+    width: 55vw;
+    height: 55vh;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.details{
+    width: 45%;
+    height: fit-content;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1% 1%;
+}
+
+.details div h1{
+    color: blueviolet;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+
+.bookContainer .image{
+    /* border: 1px solid red; */
+    width: 40%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.details div{
+    display: flex;
+}
+
+#bimage{
+    width: 60%;
 }

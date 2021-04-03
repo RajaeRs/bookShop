@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Books</title>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css?v=<?php echo time();?>">
     <link rel="stylesheet" href="./css/bootstrap.css">
 
 </head>
@@ -19,6 +19,7 @@
             <div class="navbar-nav">
             <a class="nav-item nav-link active" href="index.php">Home <span class="sr-only">(current)</span></a>
             <a class="nav-item nav-link" href="books.php">Books</a>
+            <a class="nav-item nav-link" href="contact.php">Contact us</a>
             </div>
         </div>
     </nav>
@@ -39,38 +40,34 @@
             ?>
     </div>
     <?php endif?>
+    
     <div class="tableContainer">
-        <table>
+     
             <?php 
                 $booksDb = new mysqli('localhost', 'root', '', 'books') or die(mysqli_error($booksDb));
                 $result = $booksDb->query("SELECT * FROM data") or die($booksDb->error);
                 ?>
 
-            <tr>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Image</th>
-                <th>Published at</th>
-                <th colspan="2">Actions</th>
-            </tr>
-    
-
             <?php 
-                while($dataArray = $result->fetch_assoc()): ?>
+            while($dataArray = $result->fetch_assoc()): ?>
 
-            <tr>
-                <td> <?php echo $dataArray['Title'] ?> </td>
-                <td> <?php echo $dataArray['Author'] ?> </td>
-                <td> <?php echo $dataArray['Image'] ?> </td>
-                <td> <?php echo $dataArray['publishedat'] ?> </td>
-                <td colspan="2" class="action">
-                    <a href="newBookForm.php?edit=<?php echo $dataArray['id'];?>" class="edit btn" method="GET" name="edit" id="btnEDIT">EDIT</a>
-                    <a href="process.php?delete=<?php echo $dataArray['id'];?>" class="delete btn" method="GET" name="delete" id="btnDELETE">DELETE</a>
-                </td>
-            </tr> 
+            
+
+            <div class="book">
+                    <a href="/BooksLibrary/book.php?id=<?php echo $dataArray['id'];?>" method="GET" name="book">
+                        <img src="assets/<?php echo $dataArray['Image']?>" alt="">
+                    </a>
+                    <p  id="title"><?php echo $dataArray['Title']?></p>
+                    <p id="date"><?php echo $dataArray['publishedat']?></p>
+
+            </div>
             <?php endwhile?>
-        </table>
+
+
+
+            
     </div>
+
 
 
 </body>
