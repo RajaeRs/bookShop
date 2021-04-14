@@ -44,8 +44,8 @@
     <div class="tableContainer">
      
             <?php 
-                $booksDb = new mysqli('localhost', 'root', '', 'books') or die(mysqli_error($booksDb));
-                $result = $booksDb->query("SELECT * FROM data") or die($booksDb->error);
+                $booksDb = new mysqli('localhost', 'RajaeRs', 'ibtihal@RRR2001', 'crud-php') or die(mysqli_error($booksDb));
+                $result = $booksDb->query("SELECT * FROM books_shop") or die($booksDb->error);
                 ?>
 
             <?php 

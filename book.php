@@ -29,8 +29,8 @@
     <?php 
         $id = $_GET['id'];
 
-        $booksDb = new mysqli('localhost', 'root', '', 'books') or die(mysqli_error($booksDb));
-        $result = $booksDb->query("SELECT * FROM data WHERE id=$id") or die($booksDb->error);
+        $booksDb = new mysqli('localhost', 'RajaeRs', 'ibtihal@RRR2001', 'crud-php') or die(mysqli_error($booksDb));
+        $result = $booksDb->query("SELECT * FROM books_shop WHERE id=$id") or die($booksDb->error);
     ?>
 
         <?php 

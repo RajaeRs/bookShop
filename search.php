@@ -20,12 +20,12 @@
             </div>
     </nav>
     <?php
-        $booksDb = new mysqli('localhost', 'root', '', 'books') or die(mysqli_error($booksDb));
+        $booksDb = new mysqli('localhost', 'RajaeRs', 'ibtihal@RRR2001', 'crud-php') or die(mysqli_error($booksDb));
 
         if(isset($_POST['search'])){
             $searchQ = $_POST['searchQ'];
 
-            $query = $booksDb->query("SELECT * from data WHERE Title LIKE '%$searchQ%' OR Author LIKE '%$searchQ%'");
+            $query = $booksDb->query("SELECT * from books_shop WHERE Title LIKE '%$searchQ%' OR Author LIKE '%$searchQ%'");
             $count = $query->num_rows;
     ?>
 

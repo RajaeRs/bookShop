@@ -5,7 +5,7 @@
 
     session_start();
 
-    $booksDb = new mysqli('localhost', 'root', '', 'books') or die(mysqli_error($booksDb));
+    $booksDb = new mysqli('localhost', 'RajaeRs', 'ibtihal@RRR2001', 'crud-php') or die(mysqli_error($booksDb));
 
     $id = 0;
     $update = false;
@@ -26,7 +26,7 @@
         $image = $_FILES["image"]["name"];
         $publishedat = $_POST["publishedat"];
         
-        $booksDb->query("INSERT INTO data (Title, Author, Price, Quantity, Image, publishedat) VALUES('$title', '$author', '$price', '$quantity', '$image', '$publishedat')")
+        $booksDb->query("INSERT INTO books_shop (Title, Author, Price, Quantity, Image, publishedat) VALUES('$title', '$author', '$price', '$quantity', '$image', '$publishedat')")
         or die($booksDb->error);
         
         $tmp_name = $_FILES["image"]["tmp_name"];
